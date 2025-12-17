@@ -158,7 +158,7 @@ function App() {
             </ul>
           </div>
           <div>
-            <h2 className="subtitle">Participantes</h2>
+            <h2 className="subtitle">Concorrendo</h2>
             <ul className="list list-scroll">
             {restantes.map((n, i) => (
                 <li key={`${n}-${i}`} className="list-item">{n}</li>
