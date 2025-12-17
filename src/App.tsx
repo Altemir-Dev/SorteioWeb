@@ -118,7 +118,7 @@ function App() {
   return (
     <div className="container-app">
       <div className="shell">
-        <h1 className="title">Amigo Chocolate</h1>
+        <h1 className="title">Sorteio Simples</h1>
 
         <div className="card">
           <div className="card-body">
