@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@reference "tailwindcss";
+
+html, body, #root { height: 100% }
+body { background-color: #0f172a; color: #e2e8f0 }
+
+@layer components {
+  .container-app { @apply min-h-screen bg-gradient-to-b from-slate-950 to-slate-900 text-slate-100 }
+  .shell { @apply max-w-4xl mx-auto p-6 }
+  .title { @apply text-3xl font-bold mb-4 text-center }
+  .card { @apply rounded-2xl border border-slate-800 bg-slate-900/60 backdrop-blur-sm shadow-lg }
+  .card-body { @apply p-5 }
+  .label { @apply block text-sm text-slate-400 mb-2 }
+  .textarea { @apply w-full min-h-[120px] resize-y rounded-xl border border-slate-800 bg-slate-900 px-3 py-2 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-violet-500 }
+  .stats { @apply flex gap-4 mt-2 text-xs text-slate-400 }
+  .actions { @apply flex flex-col items-start gap-3 mt-3 }
+  .btn { @apply inline-flex items-center rounded-xl px-6 py-3 text-lg font-semibold transition duration-150 }
+  .btn-primary { @apply bg-violet-600 text-white hover:bg-violet-500 disabled:opacity-50 disabled:cursor-not-allowed }
+  .btn-secondary { @apply bg-slate-700 text-white hover:bg-slate-600 disabled:opacity-50 disabled:cursor-not-allowed }
+  .btn-block { @apply w-full justify-center }
+  .grid-2 { @apply grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 }
+  .subtitle { @apply text-lg font-semibold mb-2 }
+  .list { @apply divide-y divide-slate-800 rounded-xl border border-slate-800 bg-slate-900/50 }
+  .list-item { @apply px-3 py-2 }
+  .list-scroll { @apply max-h-64 overflow-y-auto }
+  .winner { @apply mt-4 flex items-center gap-3 }
+  .badge { @apply inline-flex items-center rounded-full bg-emerald-500/90 text-emerald-950 font-bold px-3 py-1 }
+  .modal { @apply fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 }
+  .modal-card { @apply rounded-2xl border border-slate-800 bg-slate-900/90 shadow-xl max-w-3xl w-full }
+  .modal-body { @apply p-8 }
+  .modal-title { @apply text-2xl font-bold text-center mb-3 }
+  .modal-name { @apply text-5xl md:text-6xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 via-pink-400 to-amber-400 }
+  .modal-actions { @apply mt-5 flex justify-center gap-3 }
+  .modal-subtitle { @apply text-center text-slate-400 }
+  .reel { @apply text-2xl font-bold text-center tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-emerald-400 to-amber-400 }
+  .pop { animation: pop-in 500ms ease-out both }
+  .pulse { animation: pulse-fade 800ms ease-in-out infinite }
+}
+
+@keyframes pop-in {
+  0% { transform: scale(0.9); opacity: 0 }
+  50% { transform: scale(1.05); opacity: 1 }
+  100% { transform: scale(1); opacity: 1 }
+}
+
+@keyframes pulse-fade {
+  0% { opacity: .6 }
+  50% { opacity: 1 }
+  100% { opacity: .6 }
+}
